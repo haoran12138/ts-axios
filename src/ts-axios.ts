@@ -7,3 +7,5 @@ export default class DummyClass {
     this.aa = aa
   }
 }
+
+let a = new DummyClass('aa')
