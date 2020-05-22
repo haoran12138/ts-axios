@@ -30,6 +30,7 @@ const router = express.Router()
 app.use(router)
 registerBaseRouter()
 registerSimpleRouter()
+registerErrorRouter()
 const port = process.env.PORT || 8080
 module.exports = app.listen(port, () => {
   console.log(`Server listening on http://localhost:${port}, Ctrl+C to stop`)

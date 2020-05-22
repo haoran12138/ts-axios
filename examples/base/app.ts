@@ -125,7 +125,6 @@ axios({
 })
 
 axios({
-  baseURL: 'http://www/baidu.com',
   method: 'post',
   url: '/base/post',
   responseType: 'json',
