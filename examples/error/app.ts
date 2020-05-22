@@ -1,5 +1,4 @@
 import axios, { AxiosError } from '../../src/index'
-
 axios({
   method: 'get',
   url: '/error/get1'
