@@ -15,7 +15,7 @@ interface Interceptors {
 }
 
 interface PromiseChain<T> {
-  resolved: ResolvedFn<T>
+  resolved: ResolvedFn<T> | ((config: AxiosRequestConfig) => AxiosPromise)
   rejected?: RejectedFn
 }
 
@@ -37,7 +37,6 @@ export default class Axios {
     } else {
       config = url
     }
-
     const chain: PromiseChain<any>[] = [
       {
         resolved: dispatchRequest,

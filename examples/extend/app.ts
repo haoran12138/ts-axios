@@ -65,7 +65,11 @@ function getUser() {
 async function test() {
   const user = await axios('/extend/user')
   console.log(user)
-  user.data.result.name
 }
 
-test()
+let interceptorRequest1 = axios.interceptors.request.use(config => {
+  console.log('11')
+  return config
+})
+
+axios.interceptors.request.eject(interceptorRequest1)
