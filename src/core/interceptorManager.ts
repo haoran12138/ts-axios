@@ -29,6 +29,7 @@ export default class InterceptorManager<T> {
   }
 
   eject(id: number): void {
+    // ! length 做id  不可直接删除
     if (this.interceptors[id]) {
       this.interceptors[id] = null
     }
